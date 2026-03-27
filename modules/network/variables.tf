@@ -24,3 +24,11 @@ variable "tags" {
   description = "Tags to apply to the VNet"
   default     = {}
 }
+
+variable "subnets" {
+  type = map(object({
+    address_prefix = string
+  }))
+  description = "Map of subnets to create"
+  default     = {}
+}
